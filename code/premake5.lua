@@ -146,6 +146,10 @@ workspace "CitizenMP"
 		"../vendor/boost-submodules/boost-mp11/include/",
 		"../vendor/boost-submodules/boost-logic/include/",
 		"../vendor/boost-submodules/boost-endian/include/",
+		"../vendor/boost-submodules/boost-describe/include/",
+		"../vendor/boost-submodules/boost-scope/include/",
+		"../vendor/boost-submodules/boost-align/include/",
+		"../vendor/boost-submodules/boost-static-string/include/",
 	}
 
 	filter { 'language:C or language:C++'}
@@ -299,8 +303,9 @@ workspace "CitizenMP"
 		include 'client/diag'
 	else
 		include 'server/launcher'
-		include 'tests'
 	end
+
+	include 'tests'
 	
 	if os.istarget('windows') then
 		include 'premake5_layout.lua'
